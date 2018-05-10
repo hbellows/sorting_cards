@@ -1,14 +1,14 @@
 class Guess
-  attr_reader :response, :card
+  attr_reader :user_input, :card
 
-  def initialize(response, card)
-    @response = response
+  def initialize(user_input, card)
+    @user_input = user_input
     @card = card
   end
 
   def correct?
-    response = @response.split
-    if response[0] == card.value && response[2] == card.suit
+    user_input = @user_input.split
+    if user_input[0] == card.value && user_input[2] == card.suit
       true
     else
       false
